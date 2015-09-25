@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+
+
+	
+</head>
+<body>
+
+<form>
+Add a country:
+<input type="text" id="country"></br></br>
+<button type = "submit" id ="button1" >Click me to submit</button></br></br>
+</form>
+
+<p id ="countrieslist"></p>
+
+
+<script>
+var countries = ["Brazil", "Germany", "Ireland"];
+$(document).ready(function(){	
+
+		$.each(countries, function(index, value) {  		
+  		$("#countrieslist").append(index+1 + ': ' + value + " "+"</br>");
+
+});
+
+});
+
+
+$("#button1").click(function(e){
+$("#countrieslist").empty();
+	countries.push($('#country').val());
+ 	
+		$.each(countries, function(index, value) {  
+		
+  		$("#countrieslist").append(index+1 + ': ' + value + " "+"</br>");	
+
+	e.preventDefault();				
+		 
+
+});
+
+
+});
+</script>
+</body>
+</html>

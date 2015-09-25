@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.intro {
+     font-weight: bold;
+}
+</style>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#button1").click(function(){
+		$("p").hide();
+	});
+
+	$("#button2").click(function(){
+		$("p").show();
+	});
+
+	$("#button3").click(function(){		
+    $("#myheading").addClass("intro");
+	});
+
+	$("#button4").click(function(){		
+    $("#myheading").removeClass("intro");
+	});
+
+	$("#button5").click(function(){	
+	
+
+	var dt = new Date($.now());
+
+	var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    $("#mytext").val("Current time is " + time);
+	});
+
+
+});
+</script>
+
+	
+</head>
+<body>
+
+<button id ="button1" >Click me to hide paragraph</button></br></br>
+
+<button id ="button2" >Click me to show paragraph</button></br></br>
+
+<button id ="button3" >Click me to add class </button></br></br>
+
+<button id ="button4" >Click me to remove class </button></br></br>
+
+<button id ="button5" >Click me to display current time </button></br></br>
+
+
+<h2>Oh, hai web!!!</h2>
+<p>I can haz cheeseburger?<p/>
+<p>OK thx bai!!!<p/>
+
+
+
+
+<div id ="myheading">Text bold/not bold</div>
+</br>
+<input type = "text" id ="mytext">
+<div id ="time"></div>
+</body>
+</html>

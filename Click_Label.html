@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js" >
+</script>
+
+
+	<title>
+	</title>
+</head>
+<body>
+<h1 id="banner-message" style="display:none;">This is a heading</h1>
+
+<div id ="button-container">
+<button>click button </button>
+<label>click label</label>
+</div>
+<script type="text/javascript">
+var hiddenBox= $("#banner-message");
+$(document).ready(function(){
+
+	$("#button-container button").on("click",function (event){
+		hiddenBox.show();
+	});
+	$("#button-container label").on("click",function (event){
+		hiddenBox.hide();
+	});
+
+});
+</script>
+</body>
+</html>
